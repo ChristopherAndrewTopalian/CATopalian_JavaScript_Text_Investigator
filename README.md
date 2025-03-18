@@ -3,6 +3,8 @@ A JavaScript application that enables very deep text analysis. It also gets all 
 
 If you enjoy my apps and tutorials please consider buying me a coffee at [paypal.me/keystonermarch](https://www.paypal.com/paypalme/keystonermarch)
 
+USE APP: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Text_Investigator/CATopalian_JavaScript_Text_Investigator.html
+
 ---
 
 ### How to Download this App
