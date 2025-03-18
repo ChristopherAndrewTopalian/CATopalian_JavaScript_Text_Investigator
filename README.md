@@ -1,7 +1,7 @@
 # CATopalian JavaScript Text Investigator
 A JavaScript application that enables very deep text analysis. It also gets all Earthquake data from across the world with the push of a button.
 
-If you enjoy my apps and tutorials please consider buying me a coffee at paypal.me/keystonermarch
+If you enjoy my apps and tutorials please consider buying me a coffee at [paypal.me/keystonermarch](https://www.paypal.com/paypalme/keystonermarch)
 
 ---
 
