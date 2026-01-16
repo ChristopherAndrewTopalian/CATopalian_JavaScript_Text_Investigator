@@ -2,10 +2,14 @@
 
 function makeInterface()
 {
+    ba(makeTitleOfApp());
+
+    //-//
+
     let mainContainer = ce('div');
     mainContainer.id = 'mainContainer';
     mainContainer.style.position = 'absolute';
-    mainContainer.style.left = '20px';
+    mainContainer.style.left = '5px';
     mainContainer.style.top = '25px';
     ba(mainContainer);
 
@@ -43,12 +47,12 @@ function makeInterface()
     latestEarthquakeButton.title = 'Get most recent Earthquake data from the internet';
     latestEarthquakeButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     latestEarthquakeButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = fetchMostRecentEarthquakeData();
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = fetchMostRecentEarthquakeData();
     };
     btnDivInternetData.append(latestEarthquakeButton);
 
@@ -60,12 +64,12 @@ function makeInterface()
     allEarthquakesButton.title = 'Get all Earthquake data from the internet';
     allEarthquakesButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     allEarthquakesButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = fetchAllEarthquakeData();
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = fetchAllEarthquakeData();
     };
     btnDivInternetData.append(allEarthquakesButton);
 
@@ -77,12 +81,12 @@ function makeInterface()
     randomJokeButton.title = 'Get a random joke from the internet';
     randomJokeButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     randomJokeButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = fetchRandomJoke();
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = fetchRandomJoke();
     };
     btnDivInternetData.append(randomJokeButton);
 
@@ -113,12 +117,12 @@ function makeInterface()
     wordCountButton.title = 'Count the number of words';
     wordCountButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     wordCountButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = getWordCount(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = getWordCount(textInput.value);
     };
     btnDivAnalyzeText.append(wordCountButton);
 
@@ -130,12 +134,12 @@ function makeInterface()
     wordFrequencyButton.title = 'Count the frequency of each word';
     wordFrequencyButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     wordFrequencyButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = getWordFrequency(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = getWordFrequency(textInput.value);
     };
     btnDivAnalyzeText.append(wordFrequencyButton);
 
@@ -147,12 +151,12 @@ function makeInterface()
     patternRecognitionButton.title = 'Search for Pattern of word THE';
     patternRecognitionButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     patternRecognitionButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = detectPattern(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = detectPattern(textInput.value);
     };
     btnDivAnalyzeText.append(patternRecognitionButton);
 
@@ -164,12 +168,12 @@ function makeInterface()
     avgWordLengthButton.title = 'Average length of words';
     avgWordLengthButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     avgWordLengthButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = calculateAvgWordLength(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = calculateAvgWordLength(textInput.value);
     };
     btnDivAnalyzeText.append(avgWordLengthButton);
 
@@ -181,12 +185,12 @@ function makeInterface()
     sentimentRatingButton.title = 'The general intention of the text';
     sentimentRatingButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     sentimentRatingButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = detectSentiment(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = detectSentiment(textInput.value);
     };
     btnDivAnalyzeText.append(sentimentRatingButton);
 
@@ -198,12 +202,12 @@ function makeInterface()
     extractKeywordsButton.title = 'Get Keywords without getting common link words';
     extractKeywordsButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     extractKeywordsButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = extractKeywords(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = extractKeywords(textInput.value);
     };
     btnDivAnalyzeText.append(extractKeywordsButton);
 
@@ -215,12 +219,12 @@ function makeInterface()
     extractKeywordsUppercaseButton.title = 'Uppercase extracted keywords';
     extractKeywordsUppercaseButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     extractKeywordsUppercaseButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = extractKeywordsUppercase(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = extractKeywordsUppercase(textInput.value);
     };
     btnDivAnalyzeText.append(extractKeywordsUppercaseButton);
 
@@ -232,12 +236,12 @@ function makeInterface()
     titleCaseKeywordsButton.title = 'Titlecases the words';
     titleCaseKeywordsButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     titleCaseKeywordsButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = titleCaseKeywords(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = titleCaseKeywords(textInput.value);
     };
     btnDivAnalyzeText.append(titleCaseKeywordsButton);
 
@@ -249,12 +253,12 @@ function makeInterface()
     categorizeWordsButton.title = 'Put words into categories';
     categorizeWordsButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     categorizeWordsButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = categorizeWords(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = categorizeWords(textInput.value);
     };
     btnDivAnalyzeText.append(categorizeWordsButton);
 
@@ -285,11 +289,11 @@ function makeInterface()
     capitalizeTextButton.title = 'Capitalizes all words';
     capitalizeTextButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     capitalizeTextButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
+        audioPlay('sfx_blip_001', 0.2);
         ge('resultContainer').textContent = capitalizeText(textInput.value);
     };
     btnDivFormatting.append(capitalizeTextButton);
@@ -302,11 +306,11 @@ function makeInterface()
     lowercaseTextButton.title = 'Lowercases all words';
     lowercaseTextButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     lowercaseTextButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
+        audioPlay('sfx_blip_001', 0.2);
         ge('resultContainer').textContent = lowercaseText(textInput.value);
     };
     btnDivFormatting.append(lowercaseTextButton);
@@ -319,11 +323,11 @@ function makeInterface()
     capitalizeFirstLetterButton.title = 'Capitalizes the 1st Letter of each word';
     capitalizeFirstLetterButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     capitalizeFirstLetterButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
+        audioPlay('sfx_blip_001', 0.2);
         ge('resultContainer').textContent = capitalizeFirstLetters(textInput.value);
     };
     btnDivFormatting.append(capitalizeFirstLetterButton);
@@ -336,12 +340,12 @@ function makeInterface()
     boldTextButton.title = 'Bold all words';
     boldTextButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     boldTextButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = boldText(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = boldText(textInput.value);
     };
     btnDivFormatting.append(boldTextButton);
 
@@ -353,12 +357,12 @@ function makeInterface()
     normalTextButton.title = 'Normalize all words';
     normalTextButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     normalTextButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = normalText(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = normalText(textInput.value);
     };
     btnDivFormatting.append(normalTextButton);
 
@@ -370,12 +374,12 @@ function makeInterface()
     italicTextButton.title = 'Italicize all words';
     italicTextButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     italicTextButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = italicText(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = italicText(textInput.value);
     };
     btnDivFormatting.append(italicTextButton);
 
@@ -387,12 +391,12 @@ function makeInterface()
     underlineTextButton.title = 'Underline all words';
     underlineTextButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     underlineTextButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = underlineText(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = underlineText(textInput.value);
     };
     btnDivFormatting.append(underlineTextButton);
 
@@ -404,12 +408,12 @@ function makeInterface()
     bulletedListButton.title = 'Format words as Bullet List';
     bulletedListButton.onmouseover = function()
     {
-        audioPlay('sfx_warp_001', 1.0);
+        audioPlay('sfx_warp_001', 0.3);
     };
     bulletedListButton.onclick = function()
     {
-        audioPlay('sfx_blip_001', 1.0);
-        ge('resultContainer').textContent = formatAsBulletedList(textInput.value);
+        audioPlay('sfx_blip_001', 0.2);
+        ge('resultContainer').innerHTML = formatAsBulletedList(textInput.value);
     };
     btnDivFormatting.append(bulletedListButton);
 
@@ -424,7 +428,7 @@ function makeInterface()
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting
